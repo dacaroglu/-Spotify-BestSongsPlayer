@@ -1,0 +1,71 @@
+<div class="navbar-fixed">
+    <nav id="mainmenu">
+        <div class = 'nav-wrapper'>
+        <ul class = 'right'>
+            <li class="homeM">
+                <a href="../">Home</a>
+            </li>
+            <li class="aboutM"><a href="../about">About</a>
+            </li>
+            <li class="spotifyM"><a href="../spotifyLogin">Spotify</a>
+            </li>
+            <%if(user){%>
+            <li class="accountM">
+                <a href="../spotify/account">Profile</a>
+            </li>
+            <li>
+                <a href="../logout">Logout</a>
+            </li>
+            <%}else{%>
+                <li><a class='btn-large modal-trigger' href="#modal1">Login</a></li>
+            <%}%>
+        </ul>
+        </div>
+    </nav>
+</div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content ">
+            <div class="row">
+        <div class="login col s12 l4">
+            <h5>Login</h5>
+            <form method="POST" action="/login">
+                
+                <input name='email' type="text"/>
+                <label for="email">E-mail</label>
+
+                <input name='password' type="password"/>
+                <label for="password">Password</label>
+       
+                <button type="submit">Login</button>    
+            </form>
+        </div>
+        <div class="loginDivider col s0 l2"></div>
+        <div class="signup col s12 l4" >
+            <h5>Sign Up</h5>
+            <form method="POST" action="/signup">
+                <input name='name' type="text"/>                
+                <label for="name">Name</label>
+
+                <input name='username' type="text"/>
+                <label for="username">Username</label>
+
+                <input name='email' type="text"/>
+                <label for="email">E-mail</label>
+
+                
+                <input name='password' type="password"/>
+                <label for="password">Password</label>
+                
+                <input name='rePassword' type="password"/>
+                <label for="rePassword">Retype your password</label>
+
+                <button type="submit">Signup</button>    
+
+            </form>
+        </div>
+    </div>
+    </div>
+    
+  </div>

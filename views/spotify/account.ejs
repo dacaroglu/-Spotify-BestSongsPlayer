@@ -1,0 +1,45 @@
+<%- include('../partials/header') %>
+    <div id="container">
+        <div class='side-menu'>
+            <div class="row">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col s3"><a href="#profile">My Profile</a></li>
+                        <li class="tab col s3"><a href="#song">My Songs</a></li>
+                    </ul>
+                </div>
+                <div id="profile" class="col s12">
+                    <div>
+                        <div>Name: <%=user.name%></div>
+                        <div>Email: <%=user.email%></div>
+                        <div>Link: <%=user.profileURL%></div>
+                        <div>Premium: <%- user.premium ?'<i class="fa-solid fa-star"></i>':'<i class="fa-thin fa-star"></i>'%>
+                        </div>
+                        <div>About Me: </div>
+                        <form action="./account" , method="POST">
+                            <textarea name='description' type="textarea"><%=user.description%></textarea>
+                            <input type='submit' value='Save'>
+                        </form>
+                    </div>
+                </div>
+                <div id="song" class="col s12">
+                    <ul>
+                        <% song.forEach(e=> {%>
+                            <div class='row hoverable'>
+                                <div class="col s11">
+                                    <%=e.name%>, Artist: <%=e.artist%>, Album: <%=e.album%>, <%=e.duration%>
+                                </div>
+                                <div class='col'><a style='text-decoration: none;'
+                                        href="./account/delete/<%=e.songId%>">
+                                        <i style='float:right' class="fa-solid fa-ban"></i>
+                                    </a></div>
+
+                            </div>
+                            <%})%>;
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    </div>
+    <%- include('../partials/footer') %>

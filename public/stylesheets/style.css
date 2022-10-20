@@ -1,0 +1,185 @@
+html, body {
+  font-family: 'Lato', sans-serif;
+  /* color: #f5f5f5; */
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+.dotm {
+  width: 100%;
+  min-height: 100%;
+  display: block;
+  background-size: cover;
+  z-index: 99;
+}
+
+.dotm-overlay {
+  background: url(http://s14.directupload.net/images/111129/44ga9qid.png);
+  width: 100%;
+  height: 1000px;
+  z-index: 100;
+  
+}
+
+.example-marquee {
+  position: relative;
+  background: url(http://s14.directupload.net/images/111129/44ga9qid.png);
+  width: 100%;
+  height: 100vh;
+  
+}
+
+.content {
+  display: table;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 0;
+  position: relative;
+}
+
+.content .inner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  
+}
+
+.content .inner h1,
+.content .inner h2 {
+
+text-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* .content .inner h1 {
+font-size: 62px;
+} */
+
+.video-background-controls button {
+font-size: 32px;
+display: inline-block;
+padding: 0px;
+margin: 0px;
+height: 32px;
+width: 32px;
+border-radius: 16px;
+line-height: 32px;
+border: none;
+background: none;
+-webkit-appearance: none;
+color: white;
+filter: drop-shadow(0px 0px 1px black);
+cursor: pointer;
+opacity: 1;
+transition: all 250ms ease-in-out;
+margin-left: 10px;
+}
+.play-toggle {
+  
+  font-size: 32px;
+  float: right;
+  padding: 0px;
+  margin: 0px;
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  line-height: 32px;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+  color: white;
+  filter: drop-shadow(0px 0px 1px black);
+  cursor: pointer;
+  opacity: 1;
+  transition: all 250ms ease-in-out;
+  margin-left: 10px;
+  margin-top: 10px;
+  
+  }
+.video-background-controls button:hover {
+opacity: 0.5;
+}
+
+iframe {
+transition: opacity 500ms ease-in-out;
+transition-delay: 250ms;
+opacity: 0.2;
+}
+#ytbg-1{
+z-index: -10000000 !important;
+opacity: 0.8;
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.profile-img{
+  width:50px;
+  
+}
+nav > div > ul > li > a {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.container{
+  max-height: 800px;
+  overflow: auto;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.collapsible{
+  border-right:none !important;
+  border-left:none !important;
+  border-top:none !important;
+  box-shadow: none !important;
+  
+}
+.mute-toggle{
+  background: none !important;
+}
+
+.loginDivider{
+  position: relative;
+  left:50%;
+  top:10%;
+  bottom:10%;
+  border-left:1px solid rgb(40, 40, 40);
+}

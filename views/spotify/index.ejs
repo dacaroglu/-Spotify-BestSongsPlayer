@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+
+  <div class="example-marquee">
+
+    <div id="ytbg-1" data-vbg="https://www.youtube.com/watch?v=GDQnA1LVCWA"
+      data-vbg-poster="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg"
+      data-vbg-play-button="false" data-vbg-mute-button="true"></div>
+    <div class="content">
+      <div class="video-background-controls" style="position: absolute; top: 10px; right: 10px; z-index: 2;"></div>
+      <div class="container">
+
+        <% song.forEach(e=> {%>
+
+          <div class='item row hoverable'>
+            <div class='item col s11'>
+              <p class="flow-text">
+                <%=e.name%>, Artist: <%=e.artist%>, Album:<%=e.album%>, <%=e.duration%>
+              </p>
+            </div>
+            <div class='item col'>
+              <button class='play-toggle'>
+                <i id='<%=(e.name) +' '+ e.artist%>' class="fa fa-play-circle play" aria-hidden="true"></i>
+              </button>
+              <a href="/spotify/vote/<%=e.songId%>" class="play-toggle "><i class="fa-regular fa-thumbs-up"></i></a>
+            </div>
+          </div>
+          <div style='width:100px; margin: 0 auto 0 auto;' class="divider offset-s6"></div>
+          <%})%>
+      </div>
+    </div>
+    <br>
+
+  </div>
+
+  <%- include('../partials/footer') %>

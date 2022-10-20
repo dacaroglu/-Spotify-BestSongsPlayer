@@ -1,0 +1,95 @@
+<%- include('partials/header') %>
+<div class="container">
+    <h4>About Spotify Song App</h4>
+    <div class='row'>
+        <p class="flow-text">
+            
+
+                            This app is created for my school project in General Assembly. Reason was for
+                            demontrating REST structure in node express. App itself is picking most listened 5
+                            spotify songs of the user and keeping it database for playing on youtube background.
+                            After spotify API running with OAuth(passport) on index page, i have used youtube API
+                            for searhing song through youtube and autoplaying the first result comes. Then with DOM
+                            manipulation user can listen, see the video on the background on front end.
+                            I will update this project time to time to reach its purpose.
+                        </p>
+                        <ul class="collapsible">
+            
+                
+                        
+                    
+            
+            <li>
+                <div class="collapsible-header flow-text">Ice box & Problems to solve</div>
+                <div class="collapsible-body">
+                    <span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Problem/ Fetaure</th>
+                                <th>Detail</th>
+                                <th>Todo</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>App on developer mode</td>
+                                <td>Spotify, by its API permissions, doesnt let developers user API and OAuth on production mode without getting permission. Since it was very tiny subtitle i wasnt able to see. 
+
+                                </td>
+                                <td> Extra prompt will be asked for is user is allowed user, If not, they will be registered with Passport-local(manual registration) and they will notified when admin is added their account to the spotify developer access list.
+                                After this process users will be able to bring their songs to the list and they will able to delete song they dont want to bring front end.    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>User Registration</td>
+                                <td>Current state is only letting spotify users registration. </td>
+                                <td>With passport-local standart user registration will be implemented and non-spotify users will only able to favorute their the songs on the list and ability to vote songs.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Making a playlist from song list with autoplay
+                                </td>
+                                <td>
+                                    In current status app does not go the next song when current one finishes and replays same song.
+                                </td>
+                                <td>
+                                    With DOM manipulation and set timeout on js, timer will be set up equals to song length, when timer runs out it will change youtube players song to the next song.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Sorting
+                                </td>
+                                <td>
+                                    List of songs coming with their respected order in database
+                                </td>
+                                <td>After implementation of voting system, songs will be ordered by biggest length of votes(vote is embed that gets user_id and of there is already it removes from the object ) then it will be listed as most loved to least. </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header flow-text">End Game</div>
+                <div class="collapsible-body">
+                    <span>When the site completed these features and purpose of use be achieved:</span>
+                <div class="row">
+                    <div class="col l12">
+                        <ul class="collection">
+                            <li class="collection-item">Purpose: App will be collecting users top 5 songs from their spotify account and bind them to their account. Aim is to instead of ready made list of spotify, a group of people will be able to listen their friends best song and discover similar music tastes.</li>
+                            <li class="collection-item">On homepage the songs created by users will flow with autoplay.</li>
+                            <li class="collection-item">With voting system user will be able to see whoever likes that particular song</li>
+                            <li class="collection-item">With youtube API users will have insight on the song that plays and its video.</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<%- include('partials/footer') %>
